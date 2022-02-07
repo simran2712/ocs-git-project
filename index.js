@@ -9,10 +9,10 @@ function Fetch() {
   console.log(orgV, nV, mV);
 //   The url is to access the json of repos required organisation
   var url = "https://api.github.com/orgs/" + orgV + "/repos?per_page=100&page=";
-  getRepos(repo_url, url);
+  getRepos(url);
 }
 
-async function getRepos(rep_u, url_) {
+async function getRepos(url_) {
   var org = document.getElementById("name");
   var rep_res = await fetch(rep_u);
   rep_result = await rep_res.json();
